@@ -4,7 +4,7 @@ services:
   webserver:
     build: 
       context: ./bin/webserver
-    container_name: '5.6.x-webserver'
+    container_name: '5.6.x-apache'
 #    restart: 'always'
     ports:
       - "80:80"
@@ -20,7 +20,7 @@ services:
       - ..:/workspace
   mysql:
     image: "mysql:5.7"
-    container_name: '5.7-mysql'
+    container_name: '5.7.x-mysql'
 #    restart: 'always'
     ports:
       - "3306:3306"
